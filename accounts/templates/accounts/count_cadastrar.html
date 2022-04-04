@@ -1,0 +1,44 @@
+<!-- no app extende o dj template da raiz  -->
+{%extends 'template1.html'%}
+<p>{%block 'titulo'%}Cadastrar{%endblock%}</p>
+{%block 'conteudo'%}
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      &nbsp;
+    </div>
+  </div>
+</div>
+{{envia_html}}
+<div class="d-flex justify-content-center">
+  <div class="card" style="width: 400px;">
+    <div class="card-body">
+      <h5 class="card-title text-center">Cadastro</h5>
+      <h6 class="card-subtitle mb-2 text-muted  text-center">Usuário</h6>
+      <p class="card-text">
+        <form action="{%url 'count_cadastrar'%}" method="post">
+          {% csrf_token %}
+          {%include 'partial/form/campo/nome_completo.html'%}
+          {%include 'partial/form/campo/endereco.html'%}
+          {%include 'partial/form/campo/numero.html'%}
+          {%include 'partial/form/campo/bairro.html'%}
+          {%include 'partial/form/campo/cep.html'%}
+          {%include 'partial/form/campo/cidade.html'%}
+          {%include 'partial/form/campo/uf.html'%}
+          {%include 'partial/form/campo/referencia.html'%}
+          {%include 'partial/form/campo/cpf.html'%}
+          {%include 'partial/form/campo/rg.html'%}
+          {%include 'partial/form/campo/email.html'%}
+          {%include 'partial/form/campo/username.html'%}
+          {%include 'partial/form/campo/password1.html'%}
+          {%include 'partial/form/campo/password2.html'%}
+          {%include 'partial/form/campo/aceito_check.html'%}
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </p>
+      <a href="{%url 'count_logar'%}" class="card-link">Logar</a>
+      <a href="javascript:history.back()" class="card-link">Retornar</a>
+    </div>
+  </div>
+</div>
+{%endblock%}

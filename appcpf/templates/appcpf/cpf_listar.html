@@ -1,0 +1,53 @@
+{%extends 'template1.html'%} 
+{%load static%}
+<!--no app extende o template da raiz -->
+{%block 'titulo'%} Exibir CPF {%endblock%}
+{%block 'conteudo'%}
+<div class="container">
+  &nbsp;
+</div>
+<div class="container">
+  {% for elemento in lista_html %} 
+    {%if elemento < 10%}
+      <div class="card float-left" style="width: 18rem; height: 25rem; margin-right: 10px; margin-bottom: 10px">
+        <div class="d-flex justify-content-center">
+          <img
+            src="{%static 'img/pessoa/'%}pessoa_00{{elemento}}.jpg"
+            class="rounded-circle img-thumbnail"
+            style="width: 10rem; height: 10rem; margin-top: 10px"
+          />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Nome da Pessoa</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of
+            the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Visitar</a>
+        </div>
+      </div>
+    {%else%}
+      <div class="card float-left" style="width: 18rem; height: 25rem; margin-right: 10px; margin-bottom: 10px">
+        <div class="d-flex justify-content-center">
+          <img
+            src="{%static 'img/pessoa/'%}pessoa_0{{elemento}}.jpg"
+            class="rounded-circle img-thumbnail"
+            style="width: 10rem; height: 10rem; margin-top: 10px"
+          />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Nome da Pessoa</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of
+            the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Visitar</a>
+        </div>
+      </div>
+    {%endif%} 
+  {% endfor %}
+</div>
+<div class="card float-none" style="width: 18rem; height: 25rem; margin-right: 10px">
+  <h5>&nbsp;</h5>
+</div>
+{%endblock%}

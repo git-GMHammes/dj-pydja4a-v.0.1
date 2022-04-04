@@ -1,0 +1,61 @@
+<!-- Exemplo de único botão danger -->
+<ul class="nav justify-content-center" style="background-color: #800080; height: 50px;">
+    <li class="nav-item" style="margin-right: 10px; margin-top: 5px;">
+      <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Usuário
+          </button>
+          <div class="dropdown-menu">
+          <a class="dropdown-item" href="{%url 'count_logar'%}">Logar</a>
+          <a class="dropdown-item" href="{%url 'count_cadastrar'%}">Cadastrar</a>
+          <a class="dropdown-item" href="{%url 'cpf_listar'%}">Listar</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Sair</a>
+          </div>
+      </div>
+    </li>
+    <li class="nav-item" style="margin-right: 10px; margin-top: 5px;">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Setor
+            </button>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="{%url 'appsetor123_cadastrar'%}">Cadastrar</a>
+            <a class="dropdown-item" href="#">Campanha</a>
+            <a class="dropdown-item" href="#">Patrcinio</a>
+            <a class="dropdown-item" href="#">Esporte</a>
+            <a class="dropdown-item" href="#">Localização</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">mensagens</a>
+            </div>
+        </div>
+      </li>
+    <li class="nav-item" style="margin-right: 10px; margin-top: 5px;">
+      <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Comunicação
+          </button>
+          <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Chat</a>
+          <a class="dropdown-item" href="#">Mensagens não lidas</a>
+          <a class="dropdown-item" href="#">Histórico</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Avaliação</a>
+          </div>
+      </div>
+    </li>
+    <li class="nav-item" style="margin-right: 10px; margin-top: 5px;">
+      <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Instituição
+          </button>
+          <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Quem Somos</a>
+          <a class="dropdown-item" href="#">ODS</a>
+          <a class="dropdown-item" href="#">Insentivo</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Geolocalizaçõ</a>
+          </div>
+      </div>
+    </li>
+</ul>
